@@ -10,7 +10,7 @@ import datetime
 import wikipedia 
 
 
-os.environ["GEMINI_API_KEY"]= "AIzaSyClkgH2yCu5C_BBFu6Ow-AekSIyV08F-TY"
+os.environ["GEMINI_API_KEY"]= "Your Gemini API Key"
 
 import threading
 
