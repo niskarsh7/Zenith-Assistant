@@ -8,6 +8,7 @@ from google import genai
 import os
 import datetime
 import wikipedia 
+import whatsapp_helper
 
 
 os.environ["GEMINI_API_KEY"]= "Your Gemini API Key"
@@ -60,6 +61,12 @@ class ZenithAssistant:
 
         elif "open my linkedin" in command:
             webbrowser.open("https://www.linkedin.com/in/vansh-kumar-nigam")
+
+        elif "open whatsapp" in command:
+            whatsapp_helper.open_whatsapp_web()
+
+        elif command.startswith("send whatsapp to"):
+            whatsapp_helper.handle_whatsapp_command(command, self.speak)
 
         elif command.startswith("search"):
             result = self.wikiResult(command)
